@@ -195,6 +195,37 @@ export default function RootLayout({ children }: RootLayoutProps) {
           }
           .footer-link:hover { color: #c75b3c; }
           .footer-copy { color: #58635d; font-size: 0.75rem; }
+
+          @media (max-width: 820px) {
+            .nav-inner {
+              height: auto;
+              min-height: 72px;
+              flex-wrap: wrap;
+              column-gap: 1rem;
+              padding: 0.55rem 0;
+            }
+            .nav-links {
+              order: 3;
+              flex: 0 0 100%;
+              justify-content: space-between;
+              gap: 0.4rem;
+              padding: 0.15rem 0 0.25rem;
+            }
+            .nav-link { font-size: 0.78rem; }
+            .nav-cta { margin-left: auto; }
+            .footer-shell { padding: 2.5rem 1.25rem; }
+            .footer-links { gap: 1.25rem; }
+          }
+
+          @media (max-width: 480px) {
+            .nav-shell { padding: 0 1rem; }
+            .nav-links { gap: 0.25rem; }
+            .nav-link { font-size: 0.68rem; letter-spacing: 0; }
+            .nav-cta { padding: 7px 11px; font-size: 0.72rem; }
+            .logo-text { font-size: 0.95rem; }
+            .footer-shell { padding: 2rem 1rem; }
+            .footer-links { gap: 1rem; }
+          }
         `}</style>
       </body>
     </html>

@@ -388,9 +388,9 @@ export default function Contact() {
         }
         .info-card:hover .info-icon { transform: scale(1.1) rotate(-4deg); }
 
-        .info-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+        .info-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
         .info-label { font-size: 0.7rem; color: var(--c-muted); letter-spacing: 0.1em; text-transform: uppercase; }
-        .info-value { font-size: 0.9rem; color: #fff; font-weight: 500; }
+        .info-value { font-size: 0.9rem; color: #fff; font-weight: 500; overflow-wrap: anywhere; }
 
         .info-arrow { color: var(--c-muted); transition: color 0.3s, transform 0.3s; }
         .info-card:hover .info-arrow { color: #fff; transform: translateX(4px); }

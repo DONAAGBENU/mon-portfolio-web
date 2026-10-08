@@ -157,6 +157,8 @@ export default function App() {
           text-align: left;
           padding: 0;
           max-width: 650px;
+          width: 100%; min-width: 0;
+          container-type: inline-size;
           animation: heroReveal 1.2s cubic-bezier(0.16,1,0.3,1) both;
         }
         @keyframes heroReveal {
@@ -194,19 +196,21 @@ export default function App() {
           line-height: 1;
           margin: 0;
           display: flex; flex-direction: column; gap: 0.1em;
+          width: 100%; min-width: 0;
         }
         .hero-title-line {
           display: block;
+          white-space: nowrap;
           animation: titleSlide 0.9s cubic-bezier(0.16,1,0.3,1) both;
         }
         .line-1 {
-          font-size: clamp(3.5rem, 9vw, 7rem);
+          font-size: clamp(2.25rem, 12cqi, 6.5rem);
           color: rgba(255,255,255,0.85);
           letter-spacing: -0.02em;
           animation-delay: 0.15s;
         }
         .line-2 {
-          font-size: clamp(4rem, 11vw, 9rem);
+          font-size: clamp(2.25rem, 13cqi, 7rem);
           letter-spacing: -0.03em;
           animation-delay: 0.25s;
         }
@@ -338,12 +342,23 @@ export default function App() {
           100% { transform: translateY(12px); opacity: 0; }
         }
         @media (max-width: 820px) {
-          .hero-section { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 112px; }
+          .hero-section { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; padding: 132px 1.5rem 4rem; }
           .hero-content { align-items: center; text-align: center; margin: 0 auto; }
           .hero-ctas { justify-content: center; }
           .hero-visual { width: min(72vw, 340px); grid-row: 1; }
           .hero-lottie { width: 112px; height: 112px; }
           .scroll-indicator { display: none; }
+        }
+
+        @media (max-width: 480px) {
+          .hero-section { gap: 2rem; padding: 124px 1rem 3rem; }
+          .hero-visual { width: min(78vw, 300px); }
+          .hero-badge { max-width: 100%; padding: 6px 12px; font-size: 0.7rem; }
+          .hero-role { gap: 8px; letter-spacing: 0.12em; font-size: 0.75rem; }
+          .hero-tagline { font-size: 0.95rem; line-height: 1.65; }
+          .hero-ctas { width: 100%; gap: 0.7rem; }
+          .cta-primary, .cta-ghost { padding: 12px 16px; font-size: 0.85rem; }
+          .cta-download { flex-basis: 100%; justify-content: center; }
         }
       `}</style>
     </main>

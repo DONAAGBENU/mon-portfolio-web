@@ -607,6 +607,23 @@ export default function Projects() {
           border-color: #7c6bff;
           box-shadow: 0 0 8px rgba(124,107,255,0.6);
         }
+
+        @media (max-width: 768px) {
+          .projects-section { padding: 4rem 1.25rem; }
+          .section-label { gap: 10px; margin-bottom: 2.5rem; letter-spacing: 0.18em; }
+          .projects-header, .filter-tabs { margin-bottom: 2.5rem; }
+          .filter-tabs { gap: 8px; }
+          .filter-tab { padding: 8px 16px; }
+        }
+
+        @media (max-width: 480px) {
+          .projects-section { padding: 3rem 1rem; }
+          .projects-lottie { width: 160px; height: 160px; }
+          .project-card { border-radius: 8px; }
+          .card-body { padding: 1.2rem; }
+          .card-actions { gap: 8px; }
+          .btn-demo, .btn-ghost { padding: 10px 12px; font-size: 0.76rem; }
+        }
       `}</style>
     </section>
   )

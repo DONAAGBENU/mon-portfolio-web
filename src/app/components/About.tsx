@@ -291,6 +291,23 @@ export default function About() {
           color: #fff;
           transform: translateX(4px);
         }
+
+        @media (max-width: 768px) {
+          .about-section { padding: 4rem 1.25rem; }
+          .section-label { gap: 10px; margin-bottom: 2.5rem; letter-spacing: 0.18em; }
+          .about-grid { gap: 2rem; }
+          .identity-card { position: static; padding: 1.75rem; }
+          .about-lottie { height: 220px; }
+        }
+
+        @media (max-width: 480px) {
+          .about-section { padding: 3rem 1rem; }
+          .identity-card { padding: 1.4rem; }
+          .mini-stats { gap: 6px; }
+          .mini-stat-label { font-size: 0.62rem; }
+          .about-lottie { height: 180px; }
+          .highlight-card { padding: 15px; }
+        }
       `}</style>
     </section>
   )
